@@ -1,0 +1,37 @@
+.barChart {
+    fill: #694882;
+    stroke: darkgray;
+    stroke-width: 1px;
+}
+
+.lines {
+    stroke: #339999;
+    fill: none
+}
+
+.areas {
+    stroke: none;
+    fill: #694882
+}
+
+circle {
+    fill: #339999;
+}
+
+.frame {
+    fill: none;
+    stroke: black;
+    stroke-width: 2px;
+}
+
+/* Styles that clean up the layout;
+ * you can ignore these */
+div {
+    display: inline-block;
+    border: 1px solid lightgray;
+    margin: 1em;
+}
+
+div, span {
+    padding: 1em;
+}
