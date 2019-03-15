@@ -21,7 +21,7 @@
     "build-web": "npm run clean && npm install && npm run webpack",
     "dev-lib": "npm run clean && npm install && npm-run-all --parallel tsc-dev",
     "dev-lib-esm": "npm run clean && npm install && npm-run-all --parallel tsc-esm-dev",
-    "dev-web": "npm run clean && npm install && npm run webpack-dev",
+    "dev-web": "npm run webpack-dev",
     "dev": "npm run clean && npm install && npm-run-all --parallel tsc-dev tsc-esm-dev webpack-dev"
   },
   "repository": {
@@ -66,7 +66,6 @@
   },
   "dependencies": {
     "@types/d3": "^5.7.1",
-    "provenance-lib-core": "^3.2.0",
     "redux": "^4.0.1"
   }
 }

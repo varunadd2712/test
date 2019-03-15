@@ -1,13 +1,14 @@
-import * as d3 from 'd3'
 import { createStore, combineReducers } from "redux";
-import { Provenance } from "provenance-lib-core/lib/src";
+import { Provenance } from "provenance-lib-core/lib/src/";
+import {resetState, changeData, staircase, returnFreshState, stateObject} from "./helper";
 
 import {
   ReversibleAction,
   ReversibleActionCreator
-} from "provenance-lib-core/lib/src/provenance-core/ProvenanceActions";
+} from "provenance-lib-core/lib/src/";
 
-import { StateNode } from "provenance-lib-core/lib/src/provenance-core/NodeInterfaces";
+import { StateNode }
+from "provenance-lib-core/lib/src";
 
 export enum VizActionsEnum {
   DATASET_UPDATE = "DATASET_UPDATE",
@@ -18,6 +19,7 @@ interface VizAction {
   type: VizActionsEnum;
   args: number;
 }
+let currentState;
 
 export const createStaircaseAction = (toSet:number): VizAction => ({
   type: VizActionsEnum.STAIRCASE,
@@ -29,22 +31,27 @@ export const createUpdateAction = (toSet:number): VizAction => ({
   args: toSet
 });
 
-const vizReducer = (count: number, action: VizAction) => {
-  console.log("called with")
-  console.log(action)
+const vizReducer = (count: stateObject, action: VizAction) => {
   switch (action.type) {
     case "DO_" + VizActionsEnum.DATASET_UPDATE: {
       changeData();
-      return count + action.args;
+      return returnFreshState();
     }
 
     case "DO_" + VizActionsEnum.STAIRCASE: {
-      staircase();
-      return count + action.args;
+      return staircase();
+    }
+
+    case "UNDO_" + VizActionsEnum.STAIRCASE: {
+      //resetState();
+      //return count + action.args;
+      return returnFreshState();
+
     }
 
     default:
-      return count + 500;
+      //return count + 500;
+      return returnFreshState();
   }
 };
 
@@ -55,216 +62,45 @@ export const Vizualization = () =>
     })
   );
 
-
 const app = Vizualization();
 
 const provenance = Provenance(app);
 
-const createReversibleAddAction = (toSet: number): ReversibleAction<number, number> => {
+const createReversibleStaircaseAction = (toSet: number): ReversibleAction<number, number> => {
   return ReversibleActionCreator(VizActionsEnum.STAIRCASE, toSet, toSet);
 };
 
-const act = createReversibleAddAction(3);
-
-console.log("Running action");
-provenance.apply(act);
-console.log(app.getState());
-provenance.apply(act);
-console.log(app.getState());
+const createReversibleUpdateAction = (toSet: number): ReversibleAction<number, number> => {
+  return ReversibleActionCreator(VizActionsEnum.DATASET_UPDATE, toSet, toSet);
+};
 
 const button: HTMLElement = document.getElementById('dataset');
-button.addEventListener("click", (e:Event) => changeData());
+button.addEventListener("click", (e:Event) => doUpdate());
 
 const button3: HTMLElement = document.getElementById('random');
-button3.addEventListener("click", (e:Event) => changeData());
+button3.addEventListener("click", (e:Event) => doUpdate());
 
 const button2:HTMLElement = document.getElementById('staircase');
-button2.addEventListener("click", (e2:Event) => staircase());
-var globalMax:number;
+button2.addEventListener("click", (e2:Event) => doStaircase());
 
-async function changeData() {
+const button4:HTMLElement = document.getElementById('undo-staircase');
+button4.addEventListener("click", (e2:Event) => callUndo());
 
-  const dataFile: HTMLSelectElement = <HTMLSelectElement>document.getElementById('dataset');
+const act = createReversibleStaircaseAction(3);
+const act2 = createReversibleUpdateAction(3);
 
-  try {
-
-    let stringVal = 'src/data/' + dataFile.value + '.csv';
-    //const data:d3.DSVRowArray<string> = await d3.csv('data/' + dataFile.value + '.csv');
-
-    d3.csv(stringVal).then(data => {
-      let elementVar = <HTMLInputElement> document.getElementById('random');
-      if (elementVar.checked) { // if random
-        update(randomSubset(data));                  // update w/ random subset of data
-      } else {
-        update(data);                                // update w/ full data
-      }
-  })
-    console.log("logging data first time");
-  }
-  catch (error) {
-    console.log(error);
-    alert('Could not load the dataset!');
-  }
+function doStaircase() {
+  provenance.apply(act);
+  console.log(app.getState());
+  console.log(provenance.graph());
 }
 
-
-
-function staircase() {
-  console.log("here value");
-  let dataFile = document.getElementById('aBarChart').children;
-  let step_size = 10;
-  for(let i = 0 ; i < dataFile.length ; i++) {
-    dataFile[i].setAttribute("width", (step_size).toString());
-    step_size += 10;
-  }
+function callUndo() {
+  provenance.goBackNSteps(1);
 }
 
-function calculateGlobalMax(data:d3.DSVRowArray<string>) {
-  globalMax = 0;
-  let rowMax:number;
-  console.log("logging data here");
-  console.log(data);
-  for(let i = 0 ; i < data.length ; i++) {
-
-    if(+data[i].a > +data[i].b)
-    rowMax = +data[i].a;
-    else
-    rowMax = +data[i].b;
-
-    if(rowMax > globalMax)
-    globalMax = rowMax;
-  }
-  console.log("globalMax is");
-  console.log(globalMax);
-}
-
-function randomSubset(data) {
-  return data.filter( d => (Math.random() > 0.5));
-}
-
-function update(data) {
-
-  for (let d of data) {
-    d.a = +d.a; //unary operator converts string to number
-    d.b = +d.b; //unary operator converts string to number
-  }
-
-  console.log("logging data");
-  console.log(data);
-
-  // Set up the scales
-  let aScale = d3.scaleLinear()
-  .domain([0, +d3.max(data, (d:any) => d.a)])
-  .range([0, 140]);
-
-  let bScale = d3.scaleLinear()
-  .domain([0, +d3.max(data, (d:any) => d.b)])
-  .range([0, 140]);
-
-  let iScale = d3.scaleLinear()
-  .domain([0, data.length])
-  .range([10, 120]);
-
-  let aLineGenerator = d3.line()
-  .x((d, i) => iScale(i))
-  .y((d:any) => aScale(d.a));
-
-  let bLineGenerator = d3.line()
-  .x((d, i) => iScale(i))
-  .y((d:any) => bScale(d.b));
-
-  let aAreaGenerator = d3.area()
-  .x((d, i) => iScale(i))
-  .y0(0)
-  .y1((d:any) => aScale(d.a));
-
-  let bAreaGenerator = d3.area()
-  .x((d, i) => iScale(i))
-  .y0(0)
-  .y1((d:any) => bScale(d.b));
-
-  let barA = d3.selectAll("#aBarChart");
-  barA.selectAll("rect").remove();
-  let selectionBarA = barA.selectAll("rect");
-  let dataselectionBarA = selectionBarA.data(data);
-
-  dataselectionBarA
-    .exit()
-      .style("opacity", 1)
-    .transition()
-    .duration(3000)
-      .style("opacity", 0)
-    .remove();
-
-  let newRectsA = dataselectionBarA
-                    .enter()
-                    .append("rect")
-                      .attr("x", 0)
-                      .attr("y", (d, i) => iScale(i))
-                      .attr("width", 0)
-                      .attr("height", 10)
-                      .style("opacity", 0);
-
-  dataselectionBarA = newRectsA;
-
-  dataselectionBarA
-              .transition()
-                .duration(3000)
-              .attr("x", 0)
-              .attr("y", function (d, i) {
-                return iScale(i);
-              })
-              .attr("width", function (d:any, i) {
-                return aScale(d.a);
-              })
-              .attr("height", 10)
-              .style("opacity", 1);
-
-  let barB = d3.selectAll("#bBarChart");
-  barB.selectAll("rect").remove();
-  let selectionBarB = barB.selectAll("rect");
-  let dataselectionBarB = selectionBarB.data(data);
-
-  dataselectionBarB
-    .exit()
-      .style("opacity", 1)
-    .transition()
-    .duration(3000)
-      .style("opacity", 0).remove();
-
-  let newRectsB = dataselectionBarB
-                    .enter()
-                    .append("rect")
-                      .attr("x", 0)
-                      .attr("y", (d, i) => iScale(i))
-                      .attr("width", 0)
-                      .attr("height", 10)
-                      .style("opacity", 0);
-
-  dataselectionBarB = newRectsB;
-
-  dataselectionBarB
-    .transition()
-    .duration(3000)
-      .attr("x", 0)
-      .attr("y", function (d, i) {
-        return iScale(i);
-      })
-      .attr("width", function (d:any, i) {
-        return bScale(d.b);
-      })
-      .attr("height", 10)
-        .style("opacity", 1);
-
-  let selectionLineA = d3.selectAll("#aLineChart");
-  selectionLineA.attr("d", aLineGenerator(data));
-
-  let selectionLineB = d3.selectAll("#bLineChart");
-  selectionLineB.attr("d", bLineGenerator(data));
-
-  let selectionAreaA = d3.selectAll("#aAreaChart");
-  selectionAreaA.attr("d", aAreaGenerator(data));
-
-  let selectionAreaB = d3.selectAll("#bAreaChart");
-  selectionAreaB.attr("d", bAreaGenerator(data));
+function doUpdate() {
+  provenance.apply(act2);
+  console.log(app.getState());
+  console.log(provenance.graph());
 }
