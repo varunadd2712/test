@@ -1,32 +1,34 @@
 import { createStore, combineReducers } from "redux";
-import { Provenance } from "provenance-lib-core/lib/src/";
+import { Provenance } from "provenance-lib-core/lib/src";
 import {resetState, changeData, staircase, returnFreshState, stateObject} from "./helper";
 
 import {
   ReversibleAction,
   ReversibleActionCreator
-} from "provenance-lib-core/lib/src/";
-
-import { StateNode }
-from "provenance-lib-core/lib/src";
+} from "provenance-lib-core/lib/src/index";
 
 export enum VizActionsEnum {
   DATASET_UPDATE = "DATASET_UPDATE",
-  STAIRCASE = "STAIRCASE"
+  STAIRCASE = "STAIRCASE",
+  RESET = "RESET"
 }
 
 interface VizAction {
   type: VizActionsEnum;
-  args: number;
+  args: stateObject;
 }
-let currentState;
 
-export const createStaircaseAction = (toSet:number): VizAction => ({
+export const createStaircaseAction = (toSet:stateObject): VizAction => ({
   type: VizActionsEnum.STAIRCASE,
   args: toSet
 });
 
-export const createUpdateAction = (toSet:number): VizAction => ({
+export const createUpdateAction = (toSet:stateObject): VizAction => ({
+  type: VizActionsEnum.DATASET_UPDATE,
+  args: toSet
+});
+
+export const createResetAction = (toSet:stateObject): VizAction => ({
   type: VizActionsEnum.DATASET_UPDATE,
   args: toSet
 });
@@ -49,20 +51,25 @@ const vizReducer = (count: stateObject, action: VizAction) => {
 
     }
 
+    case VizActionsEnum.RESET: {
+      resetState(action.args);
+      return count;
+    }
+
     default:
       //return count + 500;
       return returnFreshState();
   }
 };
 
-export const Vizualization = () =>
+export const Vizualization1 = () =>
   createStore(
     combineReducers({
       count: vizReducer
     })
   );
 
-const app = Vizualization();
+const app = Vizualization1();
 
 const provenance = Provenance(app);
 
@@ -96,7 +103,8 @@ function doStaircase() {
 }
 
 function callUndo() {
-  provenance.goBackNSteps(1);
+  //provenance.goBackNSteps(1);
+  provenance.applyReset("RESET");
 }
 
 function doUpdate() {

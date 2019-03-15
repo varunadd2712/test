@@ -5,11 +5,16 @@ export interface stateObject {
 }
 
 export function resetState(prevState : stateObject) {
+  console.log("touchdown");
+  console.log("called with");
+  console.log(Object.keys(prevState));
+  let listsOfKey = Object.keys(prevState)[0];
   let dataFile = document.getElementById('aBarChart').children;
+  console.log(dataFile);
   let dataFileCopy = [];
 
   for(let j = 0 ; j < dataFile.length ; j++) {
-    dataFileCopy[j] = dataFile[prevState.order[j]].getAttribute("width");
+    dataFileCopy[j] = dataFile[prevState[listsOfKey].order[j]].getAttribute("width");
   }
 
   for(let j = 0 ; j < dataFile.length ; j++) {
