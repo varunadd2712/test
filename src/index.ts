@@ -5,7 +5,7 @@ import {resetState, changeData, staircase, returnFreshState, stateObject} from "
 import {
   ReversibleAction,
   ReversibleActionCreator
-} from "provenance-lib-core/lib/src/index";
+} from "provenance-lib-core/lib/src";
 
 export enum VizActionsEnum {
   DATASET_UPDATE = "DATASET_UPDATE",
@@ -52,8 +52,9 @@ const vizReducer = (count: stateObject, action: VizAction) => {
     }
 
     case VizActionsEnum.RESET: {
+      console.log("recieved args", action.args);
       resetState(action.args);
-      return count;
+      return action.args;
     }
 
     default:
@@ -71,7 +72,7 @@ export const Vizualization1 = () =>
 
 const app = Vizualization1();
 
-const provenance = Provenance(app);
+const provenance = Provenance(app, "RESET");
 
 const createReversibleStaircaseAction = (toSet: number): ReversibleAction<number, number> => {
   return ReversibleActionCreator(VizActionsEnum.STAIRCASE, toSet, toSet);
@@ -98,17 +99,14 @@ const act2 = createReversibleUpdateAction(3);
 
 function doStaircase() {
   provenance.apply(act);
-  console.log(app.getState());
   console.log(provenance.graph());
 }
 
 function callUndo() {
   //provenance.goBackNSteps(1);
-  provenance.applyReset("RESET");
+  provenance.goBackOneStepWithState();
 }
 
 function doUpdate() {
   provenance.apply(act2);
-  console.log(app.getState());
-  console.log(provenance.graph());
 }

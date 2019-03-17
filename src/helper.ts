@@ -7,7 +7,7 @@ export interface stateObject {
 export function resetState(prevState : stateObject) {
   console.log("touchdown");
   console.log("called with");
-  console.log(Object.keys(prevState));
+  console.log(prevState);
   let listsOfKey = Object.keys(prevState)[0];
   let dataFile = document.getElementById('aBarChart').children;
   console.log(dataFile);
