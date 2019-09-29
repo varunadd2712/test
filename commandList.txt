@@ -1,0 +1,1000 @@
+ 1020  gcc -o a assignment1.c
+ 1021  ./a
+ 1022  gcc -o a assignment1.c
+ 1023  ./a
+ 1024  clear
+ 1025  gcc -o a assignment1.c
+ 1026  ./a
+ 1027  clear
+ 1028  gcc -o a assignment1.c
+ 1029  ./a
+ 1030  clear
+ 1031  gcc -o a assignment1.c
+ 1032  ./a
+ 1033  gcc -o a assignment1.c
+ 1034  ./a
+ 1035  clear
+ 1036  gcc -o a assignment1.c
+ 1037  ./a
+ 1038  gcc -o a assignment1.c
+ 1039  ./a
+ 1040  clear
+ 1041  gcc -o a assignment1.c
+ 1042  ./a
+ 1043  clear
+ 1044  gcc -o a assignment1.c
+ 1045  ./a
+ 1046  clear
+ 1047  gcc -o a assignment1.c
+ 1048  ./a
+ 1049  clear
+ 1050  gcc -o a assignment1.c
+ 1051  ./a
+ 1052  clear
+ 1053  gcc -o a assignment1.c
+ 1054  ./a
+ 1055  clear
+ 1056  gcc -o a assignment1.c
+ 1057  ./a
+ 1058  clear
+ 1059  gcc -o a assignment1.c
+ 1060  clear
+ 1061  gcc -o a assignment1.c
+ 1062  clear
+ 1063  gcc -o a assignment1.c
+ 1064  ./a
+ 1065  gcc -o a assignment1.c
+ 1066  ./a
+ 1067  gcc -o a assignment1.c
+ 1068  ./a
+ 1069  clear
+ 1070  gcc -o a assignment1.c
+ 1071  ./a
+ 1072  gcc -o a assignment1.c
+ 1073  ./a
+ 1074  gcc -o a assignment1.c
+ 1075  ./a
+ 1076  clear
+ 1077  gcc -o a assignment1.c
+ 1078  clear
+ 1079  gcc -o a assignment1.c
+ 1080  ./a
+ 1081  gcc -o a assignment1.c
+ 1082  ./a
+ 1083  gcc -o a assignment1.c
+ 1084  ./a
+ 1085  gcc -o a assignment1.c
+ 1086  ./a
+ 1087  clear
+ 1088  man syscall
+ 1089  gcc -o a assignment1.c
+ 1090  clear
+ 1091  ./a
+ 1092  ls
+ 1093  clear
+ 1094  gcc -o a assignment1.c
+ 1095  ./a
+ 1096  ls
+ 1097  gcc -o a assignment1.c
+ 1098  ./a
+ 1099  clear
+ 1100  gcc -o a assignment1.c
+ 1101  clear
+ 1102  gcc -o a assignment1.c
+ 1103  clear
+ 1104  gcc -o a assignment1.c
+ 1105  ./a
+ 1106  ls
+ 1107  vi pid.log 
+ 1108  gcc -o a assignment1.c
+ 1109  ./a
+ 1110  vi pid.log 
+ 1111  ls
+ 1112  cd /home/sai/PycharmProjects/Assign1
+ 1113  clear
+ 1114  ls
+ 1115  python main.py
+ 1116  python3 main.py
+ 1117  clear
+ 1118  python3 main.py
+ 1119  clear
+ 1120  python3 main.py
+ 1121  ls
+ 1122  cd OS
+ 1123  gcc -o a assignment1.c
+ 1124  ./a
+ 1125  gcc -o a assignment1.c
+ 1126  clear
+ 1127  gcc -o a assignment1.c
+ 1128  ./a
+ 1129  gcc -o a assignment1.c
+ 1130  ./a
+ 1131  clear
+ 1132  gcc -o a assignment1.c
+ 1133  ./a
+ 1134  gcc -o a assignment1.c
+ 1135  ./a
+ 1136  clear
+ 1137  cd ~/Downloads/pycharm/pycharm-community-2018.3/bin/
+ 1138  sh pycharm.sh
+ 1139  cd ~/Downloads/pycharm/pycharm-community-2018.3/bin/
+ 1140  clear
+ 1141  ls
+ 1142  sh pycharm.sh 
+ 1143  cd /home/sai/PycharmProjects/Assign1/
+ 1144  ls
+ 1145  clear
+ 1146  python3 main.py 
+ 1147  clear
+ 1148  python3 main.py 
+ 1149  cd ~/Downloads/pycharm/pycharm-community-2018.3/bin/
+ 1150  sh pycharm.sh 
+ 1151  clear
+ 1152  ls
+ 1153  cd ~/
+ 1154  ls
+ 1155  cd PycharmProjects/Assign1/
+ 1156  ls
+ 1157  clear
+ 1158  ls
+ 1159  python3 main.py
+ 1160  clear
+ 1161  python3 main.py
+ 1162  clear
+ 1163  python3 main.py
+ 1164  clear
+ 1165  python3 main.py
+ 1166  clear
+ 1167  python3 main.py
+ 1168  clear
+ 1169  python3 main.py
+ 1170  clear
+ 1171  python3 main.py
+ 1172  clear
+ 1173  python3 main.py
+ 1174  clear
+ 1175  python3 main.py
+ 1176  clear
+ 1177  python3 main.py
+ 1178  clear
+ 1179  python3 main.py
+ 1180  clear
+ 1181  python3 main.py
+ 1182  clear
+ 1183  python3 main.py
+ 1184  cd ~/Downloads/pycharm/pycharm-community-2018.3/bin/
+ 1185  sh ./pycharm.sh 
+ 1186  ls
+ 1187  cd /home/sai/PycharmProjects/
+ 1188  clear
+ 1189  ls
+ 1190  cd Assign1/
+ 1191  ls
+ 1192  clear
+ 1193  python3 main.py
+ 1194  clear
+ 1195  python3 main.py
+ 1196  clear
+ 1197  python3 main.py
+ 1198  clear
+ 1199  python3 main.py
+ 1200  clear
+ 1201  python3 main.py
+ 1202  clear\
+ 1203  python3 main.py
+ 1204  clear
+ 1205  python3 main.py
+ 1206  clear
+ 1207  python3 main.py
+ 1208  clear
+ 1209  python3 main.py
+ 1210  clear
+ 1211  python3 main.py
+ 1212  pip3 install numba
+ 1213  clear
+ 1214  pip3 install numba
+ 1215  python3 main.py
+ 1216  clear
+ 1217  pip3 install numpy
+ 1218  clear
+ 1219  pip3 install numpy
+ 1220  python3 main.py
+ 1221  pip3 install numba
+ 1222  pip3 install numpy
+ 1223  pip3 install matpltlib
+ 1224  pip3 install matplotlib
+ 1225  pip3 install numpy
+ 1226  python3 main.py 
+ 1227  pip3 unistall numpy
+ 1228  pip3 uninstall numpy
+ 1229  pip3 install numpy
+ 1230  python3 main.py 
+ 1231  pip install numpy
+ 1232  sudo apt install python-pip
+ 1233  pip install numpy
+ 1234  python3 main.py 
+ 1235  pip3 uninstall numpy
+ 1236  pip uninstall numpy
+ 1237  pip install numpy
+ 1238  pip3 install numpy
+ 1239  pip3 uninstall numba
+ 1240  pip install numba
+ 1241  pip3 install numba
+ 1242  python3 main.py 
+ 1243  python3 main.py 
+ 1244  pip install numpy --upgrade
+ 1245  python3 main.py 
+ 1246  pip install numpy --upgrade
+ 1247  python3 main.py 
+ 1248  ls
+ 1249  cd ~
+ 1250  ls
+ 1251  clear
+ 1252  ls
+ 1253  cd Workspaces/
+ 1254  ls
+ 1255  clear
+ 1256  mkdir independent
+ 1257  ls
+ 1258  cd independent/
+ 1259  ls
+ 1260  clear
+ 1261  https://github.com/visdesignlab/provenance-lib-core.git
+ 1262  git init
+ 1263  git clone https://github.com/visdesignlab/provenance-lib-core.git
+ 1264  ls
+ 1265  clear
+ 1266  apm install atom-typescript
+ 1267  npm install -g mocha
+ 1268  sudo apt install npm
+ 1269  npm install -g mocha
+ 1270  npm install -g mocha@1.16
+ 1271  sudo npm install -g mocha
+ 1272  sudo npm install -g mocha@1.16.2
+ 1273  clear
+ 1274  pacman -S nodejs npm
+ 1275  npm install -g mocha@1.16
+ 1276  sudo npm install -g mocha@1.16.2
+ 1277  npm install request --save
+ 1278  ls
+ 1279  cd Workspaces/
+ 1280  ls
+ 1281  cd independent/
+ 1282  ls
+ 1283  rm -rf provenance-lib-core/
+ 1284  mkdir provenance-lib-core
+ 1285  cd provenance-lib-core/
+ 1286  clear
+ 1287  git init
+ 1288  git clone https://github.com/visdesignlab/provenance-lib-core
+ 1289  npm -i provenance-lib-cor
+ 1290  clear
+ 1291  npm -i provenance-lib-core
+ 1292  npm i provenance-lib-core
+ 1293  clear
+ 1294  ls
+ 1295  cd provenance-lib-core/
+ 1296  clear
+ 1297  npm i provenance-lib-core
+ 1298  npm start
+ 1299  clear
+ 1300  npm install npm -g
+ 1301  sudo npm install npm -g
+ 1302  clear
+ 1303  npm start
+ 1304  clear
+ 1305  npm t
+ 1306  npm run dev-lib
+ 1307  clear
+ 1308  brew install node
+ 1309  clear
+ 1310  sudo apt-get install build-essential curl git m4 ruby texinfo libbz2-dev libcurl4-openssl-dev libexpat-dev libncurses-dev zlib1g-dev
+ 1311  clear
+ 1312  sudo apt-get install build-essential curl git m4 ruby texinfo libbz2-dev libcurl4-openssl-dev libexpat-dev libncurses-dev zlib1g-dev
+ 1313  clear
+ 1314  ps aux | grep -i apt
+ 1315  sudo killall apt apt-get
+ 1316  clear
+ 1317  sudo apt-get install build-essential curl git m4 ruby texinfo libbz2-dev libcurl4-openssl-dev libexpat-dev libncurses-dev zlib1g-dev
+ 1318  ps aux | grep -i apt
+ 1319  sudo killall apt apt-get
+ 1320  clear
+ 1321  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
+ 1322  sudo apt install curl
+ 1323  clear
+ 1324  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
+ 1325  sudo apt install ruby
+ 1326  clear
+ 1327  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
+ 1328  sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+ 1329  brew install node
+ 1330  clear
+ 1331  sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+ 1332  clear
+ 1333  vi ~/.bashrc 
+ 1334  clear
+ 1335  brew install node
+ 1336  sudo apt install linuxbrew-wrapper
+ 1337  clear
+ 1338  brew install node
+ 1339  clear
+ 1340  node -v
+ 1341  npm -v
+ 1342  brew update
+ 1343  brew upgrade node
+ 1344  clear
+ 1345  ls
+ 1346  npm start
+ 1347  npm run dev-lib
+ 1348  clear
+ 1349  ls
+ 1350  cd Workspaces/
+ 1351  ls
+ 1352  cd independent/
+ 1353  ls
+ 1354  mkdir provenance-vis-example
+ 1355  clear
+ 1356  cd provenance-
+ 1357  clear
+ 1358  ls
+ 1359  cd provenance-vis-example/
+ 1360  clear
+ 1361  git clone https://github.com/visdesignlab/provenance-vis-example
+ 1362  clear
+ 1363  cd ./..
+ 1364  ls
+ 1365  clear
+ 1366  ls
+ 1367  cd ./..
+ 1368  ls
+ 1369  cd homework/
+ 1370  ls
+ 1371  cd 2018-dataviscourse-homework/
+ 1372  ls
+ 1373  cp hw3 ~/Workspaces/independent/provenance-vis-example/
+ 1374  cp -r hw3 ~/Workspaces/independent/provenance-vis-example/
+ 1375  clear
+ 1376  cd ./..
+ 1377  ls
+ 1378  cd ./..
+ 1379  ls
+ 1380  cd independent/
+ 1381  ls
+ 1382  clear
+ 1383  ls
+ 1384  cd provenance-
+ 1385  cd provenance-vis-example/
+ 1386  ls
+ 1387  clear
+ 1388  ls
+ 1389  cd provenance-vis-example/
+ 1390  ls
+ 1391  cd ./..
+ 1392  ls
+ 1393  mv hw3 provenance-vis-example/
+ 1394  ls
+ 1395  clear
+ 1396  ls
+ 1397  cd provenance-vis-example/
+ 1398  ls
+ 1399  clear
+ 1400  ls
+ 1401  cd hw3/
+ 1402  ls
+ 1403  rm -rf figures
+ 1404  rm -rf hw3.md
+ 1405  clear
+ 1406  ls
+ 1407  cd data/
+ 1408  ls
+ 1409  clear
+ 1410  ls
+ 1411  git status
+ 1412  cd ./..
+ 1413  ls
+ 1414  clear
+ 1415  git status
+ 1416  git add .
+ 1417  clear
+ 1418  ls
+ 1419  git status
+ 1420  cd ./..
+ 1421  ls
+ 1422  git status
+ 1423  git commit -m "Adding dummy visualization with few interactions, will link to provenance library"
+ 1424  git status
+ 1425  git push
+ 1426  git branch --unset-upstream
+ 1427  git push
+ 1428  git push --set-upstream origin master
+ 1429  clear
+ 1430  git remote set-url
+ 1431  git remote set-url https://github.com/visdesignlab/provenance-vis-example.git
+ 1432  clear
+ 1433  git remote -v
+ 1434  cd ./..
+ 1435  ls
+ 1436  cd ./..
+ 1437  ls
+ 1438  cd provenance-lib-core/
+ 1439  git remote -v
+ 1440  cd provenance-lib-core/
+ 1441  git remote -v
+ 1442  clear
+ 1443  cd ./..
+ 1444  ls
+ 1445  cd ./..
+ 1446  ls
+ 1447  cd provenance-vis-example/
+ 1448  ls
+ 1449  clear
+ 1450  ls
+ 1451  cd provenance-vis-example/
+ 1452  ls
+ 1453  clear
+ 1454  git status
+ 1455  git push
+ 1456  git push --set-upstream origin master
+ 1457  clear
+ 1458  cd ./..
+ 1459  ls
+ 1460  cd ./..
+ 1461  ls
+ 1462  clear
+ 1463  cd provenance-lib-core/
+ 1464  clear
+ 1465  ls
+ 1466  npm install\
+ 1467  npm install
+ 1468  npm start
+ 1469  npm t
+ 1470  clear
+ 1471  ls
+ 1472  cd ./..
+ 1473  ls
+ 1474  clear
+ 1475  cd ./..
+ 1476  ls
+ 1477  cd provenance-vis-example/
+ 1478  clear
+ 1479  ls
+ 1480  cd provenance-vis-example/
+ 1481  clear
+ 1482  ls
+ 1483  git remote -v
+ 1484  git pull
+ 1485  clear
+ 1486  git branch --set-upstream-to=origin/<branch> master
+ 1487  git branch --set-upstream-to=origin/master master
+ 1488  git push -u
+ 1489  git push --set-upstream origin master
+ 1490  clear
+ 1491  ls
+ 1492  mv hw3 simpleViz
+ 1493  ls
+ 1494  cd simpleViz/
+ 1495  ls
+ 1496  clear
+ 1497  ls
+ 1498  mv hw3.html simpleViz.html
+ 1499  ls
+ 1500  clear
+ 1501  cd ./../..
+ 1502  ls
+ 1503  cd ./..
+ 1504  ls
+ 1505  clear
+ 1506  mkdir provenance-example
+ 1507  cd provenance-
+ 1508  cd provenance-example/
+ 1509  clear
+ 1510  git init
+ 1511  git clone https://github.com/visdesignlab/provenance-example
+ 1512  clear
+ 1513  ls
+ 1514  cd ./..
+ 1515  ls
+ 1516  cd provenance-vis-example/
+ 1517  ls
+ 1518  clear
+ 1519  ls
+ 1520  cd provenance-vis-example/
+ 1521  ls
+ 1522  cp -r simpleViz ~/Workspaces/independent/provenance-example/provenance-example/
+ 1523  clear
+ 1524  cd ./..
+ 1525  ls
+ 1526  cd ./..
+ 1527  ls
+ 1528  cd provenance-example/
+ 1529  ls
+ 1530  clear
+ 1531  ls
+ 1532  cd provenance-example/
+ 1533  ls
+ 1534  clear
+ 1535  git status
+ 1536  git add simpleViz/
+ 1537  git commit -m "Initial commit to add simple visualization"
+ 1538  git status
+ 1539  git push
+ 1540  ls
+ 1541  cd /home/sai/Workspaces/la-starter-pack-master/
+ 1542  clear
+ 1543  ls
+ 1544  npm install
+ 1545  npm run dev-web
+ 1546  clear
+ 1547  npm i provenance-lib-core
+ 1548  npm install --save @types/d3
+ 1549  npm run dev-web
+ 1550  npm install
+ 1551  npm run dev-web
+ 1552  cd /home/sai/Workspaces/
+ 1553  ls
+ 1554  cd la-starter-pack-master/
+ 1555  ls
+ 1556  npm install
+ 1557  npm run dev-web
+ 1558  cd /home/sai/Workspaces/
+ 1559  ls
+ 1560  cd la-starter-pack-master/
+ 1561  npm install
+ 1562  npm run dev-web
+ 1563  cd /home/sai/Workspaces/la-starter-pack-master/
+ 1564  ls
+ 1565  clear
+ 1566  npm run dev-web
+ 1567  cd /home/sai/Workspaces/la-starter-pack-master/
+ 1568  npm i --save d3
+ 1569  npm i --save redux
+ 1570  cd /home/sai/Workspaces/la-starter-pack-master/
+ 1571  npm run dev-web
+ 1572  cd /home/sai/Workspaces/
+ 1573  ls
+ 1574  cd la-starter-pack-master/
+ 1575  ls
+ 1576  clear
+ 1577  ls
+ 1578  npm run dev-web
+ 1579  clear
+ 1580  git status
+ 1581  git add .
+ 1582  git status
+ 1583  git commit -a
+ 1584  git branch provenance-test
+ 1585  git push
+ 1586  git init
+ 1587  git remote add origin
+ 1588  git remote add https://github.com/varunadd2712/test.git
+ 1589  git remote add origin https://github.com/varunadd2712/test.git
+ 1590  git push -u origin master
+ 1591  npm run dev-web
+ 1592  cd /home/sai/Workspaces/la-starter-pack-master/
+ 1593  ls
+ 1594  npm run dev-web
+ 1595  cd /home/sai/Workspaces/la-starter-pack-master/
+ 1596  npm run dev-web
+ 1597  ls
+ 1598  cd /home/sai/Workspaces/la-starter-pack-master/
+ 1599  ls
+ 1600  git status
+ 1601  git add .
+ 1602  git status
+ 1603  git commit -a
+ 1604  git push
+ 1605  cd ./..
+ 1606  ls
+ 1607  cd independent/
+ 1608  ls
+ 1609  cd provenance-lib-core/
+ 1610  ls
+ 1611  cd provenance-lib-core/
+ 1612  ls
+ 1613  git status
+ 1614  git branch stateTestLine
+ 1615  git status
+ 1616  git branch stateTestLine
+ 1617  ls
+ 1618  git checkout stateTestLine 
+ 1619  git status
+ 1620  git add src/
+ 1621  git status
+ 1622  git commit -a
+ 1623  git push
+ 1624  git push --set-upstream origin stateTestLine
+ 1625  cd /home/sai/Workspaces/independent/provenance-lib-core/
+ 1626  ls
+ 1627  cd provenance-lib-core/
+ 1628  ls
+ 1629  npm start
+ 1630  ls
+ 1631  npm test
+ 1632  clear
+ 1633  npm test
+ 1634  clear
+ 1635  npm test
+ 1636  clear
+ 1637  npm test
+ 1638  clea
+ 1639  clear
+ 1640  npm test
+ 1641  clear
+ 1642  npm test
+ 1643  clear
+ 1644  npm test
+ 1645  clear
+ 1646  npm test
+ 1647  clear
+ 1648  npm test
+ 1649  clear
+ 1650  npm test
+ 1651  clear
+ 1652  npm test
+ 1653  clear
+ 1654  npm test
+ 1655  clear
+ 1656  npm test
+ 1657  npm start
+ 1658  npm test
+ 1659  npm start
+ 1660  npm test
+ 1661  npm start
+ 1662  git remote -v
+ 1663  git status
+ 1664  git add .
+ 1665  git status
+ 1666  git commit -a
+ 1667  git push
+ 1668  git push --set-upstream origin stateTestLine
+ 1669  clear
+ 1670  git config -l | grep url
+ 1671  git remote set-url origin "https://github.com/visdesignlab/provenance-lib-core.git"
+ 1672  git remote -v
+ 1673  git push --set-upstream origin stateTestLine
+ 1674  git remote set-url origin "https://github.com/varunadd2712/provenance-library.git"
+ 1675  git push --set-upstream origin stateTestLine
+ 1676  ls
+ 1677  cd /home/sai/Workspaces/independent/provenance-lib-core/provenance-lib-core/
+ 1678  ls
+ 1679  clear
+ 1680  ls
+ 1681  npm start
+ 1682  npm test
+ 1683  npm start
+ 1684  clear
+ 1685  ls
+ 1686  git status
+ 1687  git add .
+ 1688  git commit -a
+ 1689  git push
+ 1690  cd /home/sai/Workspaces/la-starter-pack-master/
+ 1691  ls
+ 1692  clear
+ 1693  npm run dev-web
+ 1694  ls
+ 1695  cd ./..
+ 1696  ls
+ 1697  cd independent/provenance-lib-core/
+ 1698  ls
+ 1699  clear
+ 1700  ls
+ 1701  cd provenance-lib-core/
+ 1702  ls
+ 1703  clear
+ 1704  ls
+ 1705  git diff
+ 1706  git diff HEAD~1
+ 1707  clear
+ 1708  git remote set-url origin git@github.com:varunadd2712/provenance-lib-core.git
+ 1709  git push
+ 1710  cd /home/sai/Workspaces/la-starter-pack-master/
+ 1711  ls
+ 1712  npm run dev-web
+ 1713  ls
+ 1714  cd /home/sai/Workspaces/la-starter-pack-master/
+ 1715  ls
+ 1716  cd ./..
+ 1717  ls
+ 1718  cd VisualizationProject/
+ 1719  ls
+ 1720  cd ./..
+ 1721  ls
+ 1722  cd independent/
+ 1723  ls
+ 1724  cd provenance-lib-core/
+ 1725  ls
+ 1726  git status
+ 1727  cd provenance-lib-core/
+ 1728  ls
+ 1729  git status
+ 1730  git diff
+ 1731  clear
+ 1732  ls
+ 1733  cd ./../..
+ 1734  ls
+ 1735  mkdir provenance-lib-core-forked
+ 1736  cd provenance-lib-core-forked/
+ 1737  ls
+ 1738  git init
+ 1739  git clone https://github.com/varunadd2712/provenance-lib-core.git
+ 1740  ls
+ 1741  cd provenance-lib-core/
+ 1742  ls
+ 1743  rm -rf src/
+ 1744  ls
+ 1745  cd ./..
+ 1746  ls
+ 1747  cd ./..
+ 1748  ls
+ 1749  cd provenance-lib-core
+ 1750  ls
+ 1751  cd provenance-lib-core/
+ 1752  ls
+ 1753  clear
+ 1754  cp src ./.././../provenance-lib-core-forked/provenance-lib-core
+ 1755  cp -r src ./.././../provenance-lib-core-forked/provenance-lib-core
+ 1756  cd ./../..
+ 1757  ls
+ 1758  cd provenance-lib-core-forked/
+ 1759  ls
+ 1760  cd provenance-lib-core/
+ 1761  ls
+ 1762  git status
+ 1763  git diff
+ 1764  git status
+ 1765  git checkout -b stateLine
+ 1766  ls
+ 1767  git status
+ 1768  git commmit -a
+ 1769  git commit -a
+ 1770  git push
+ 1771  git push --set-upstream origin stateLine
+ 1772  cd ./..
+ 1773  ls
+ 1774  cd ./../..
+ 1775  ls
+ 1776  cd la-starter-pack-master/
+ 1777  ls
+ 1778  npm run dev-web
+ 1779  ls
+ 1780  cd /home/sai/Workspaces/la-starter-pack-master/
+ 1781  ls
+ 1782  npm run dev-web
+ 1783  ls
+ 1784  git status
+ 1785  git add .
+ 1786  git status
+ 1787  git commit -a
+ 1788  git status
+ 1789  git remote origin
+ 1790  git remote url
+ 1791  git push
+ 1792  cd /home/sai/Workspaces/la-starter-pack-master/
+ 1793  npm run dev-web
+ 1794  cd /home/sai/Workspaces/la-starter-pack-master/
+ 1795  npm run dev-web
+ 1796  ls
+ 1797  cd /home/sai/Workspaces/independent/provenance-core
+ 1798  cd /home/sai/Workspaces/independent/provenance-lib-core
+ 1799  clear
+ 1800  ls
+ 1801  npm build
+ 1802  npm start
+ 1803  ls
+ 1804  cd provenance-lib-core/
+ 1805  ls
+ 1806  clear
+ 1807  npm start
+ 1808  cd ./..
+ 1809  ls
+ 1810  cd ./..
+ 1811  ls
+ 1812  cd provenance-lib-core-forked/
+ 1813  ls
+ 1814  git status
+ 1815  cd provenance-lib-core/
+ 1816  git status
+ 1817  git diff HEAD~1
+ 1818  git reset --hard HEAD~1
+ 1819  git status
+ 1820  ls
+ 1821  rm -rf src
+ 1822  cp ~/Workspaces/independent/provenance-lib-core/provenance-lib-core/src .
+ 1823  cp -r ~/Workspaces/independent/provenance-lib-core/provenance-lib-core/src .
+ 1824  ls
+ 1825  git status
+ 1826  git diff
+ 1827  clear
+ 1828  git status
+ 1829  git diff src/provenance-core/ApplyActionFunction.ts
+ 1830  git status
+ 1831  git diff src/provenance-core/GotoNodeActions.ts
+ 1832  git status
+ 1833  git diff src/provenance-core/NodeInterfaces.ts
+ 1834  clear
+ 1835  git status
+ 1836  git diff src/provenance-core/ProvenanceActions.ts
+ 1837  clear
+ 1838  git status
+ 1839  git diff src/provenance-core/ProvenanceCore.ts
+ 1840  clear
+ 1841  git status
+ 1842  git commit -a
+ 1843  git push
+ 1844  git status
+ 1845  git reset --soft HEAD~1
+ 1846  git status
+ 1847  git log
+ 1848  clear
+ 1849  git status
+ 1850  git stash
+ 1851  git status
+ 1852  git pull
+ 1853  git status
+ 1854  git reset --hard HEAD~1
+ 1855  git status
+ 1856  clear
+ 1857  git status
+ 1858  git stash pop
+ 1859  git status
+ 1860  git stash
+ 1861  clear
+ 1862  git push
+ 1863  git push --force
+ 1864  git stash pop
+ 1865  git commit -a
+ 1866  git push
+ 1867  git status
+ 1868  git log
+ 1869  ls
+ 1870  cd ./../../..
+ 1871  ls
+ 1872  cd la-starter-pack-master/
+ 1873  ls
+ 1874  npm run dev-web
+ 1875  ls
+ 1876  cd /home/sai/Workspaces/independent/provenance-lib-core-forked/
+ 1877  ls
+ 1878  git status
+ 1879  cd provenance-lib-core/
+ 1880  ls
+ 1881  git status
+ 1882  ls
+ 1883  git status
+ 1884  git origin
+ 1885  git remote show origin
+ 1886  git log
+ 1887  git remote show origin
+ 1888  ls
+ 1889  cd Workspaces/
+ 1890  ls
+ 1891  cd la-starter-pack-master/
+ 1892  ls
+ 1893  cd ./..
+ 1894  ls
+ 1895  clear
+ 1896  ls
+ 1897  cd independent/
+ 1898  ls
+ 1899  cd provenance-lib-core
+ 1900  ls
+ 1901  git stus
+ 1902  cd provenance-lib-core/
+ 1903  ls
+ 1904  git status
+ 1905  git stash
+ 1906  git status
+ 1907  git branch
+ 1908  git checkout master
+ 1909  clear
+ 1910  git pull
+ 1911  ls
+ 1912  git pull
+ 1913  cd ./../..
+ 1914  ls
+ 1915  cd provenance-lib-core-forked/
+ 1916  ls
+ 1917  cd provenance-lib-core/
+ 1918  ls
+ 1919  git status
+ 1920  git checkout mainline
+ 1921  git branc
+ 1922  git branch
+ 1923  git checkout master
+ 1924  git pull
+ 1925  git remote
+ 1926  git remote show origin
+ 1927  git pull
+ 1928  ls
+ 1929  cd Workspaces/
+ 1930  ls
+ 1931  cd independent/provenance-lib-core-forked/
+ 1932  npm t
+ 1933  cd provenance-lib-core/
+ 1934  ls
+ 1935  npm t
+ 1936  clear
+ 1937  npm t
+ 1938  cd Workspaces/independent/provenance-lib-core-forked/
+ 1939  npm t
+ 1940  cd provenance-lib-core/
+ 1941  ls
+ 1942  npm t
+ 1943  clear
+ 1944  npm t
+ 1945  npm install deep-diff
+ 1946  npm t
+ 1947  cd Workspaces/independent/provenance-lib-core-forked/
+ 1948  ls
+ 1949  cd provenance-lib-core/
+ 1950  git status
+ 1951  git add package.json 
+ 1952  git add src/
+ 1953  clear
+ 1954  git status
+ 1955  git add test/
+ 1956  git add sync.txt 
+ 1957  clear
+ 1958  git commit -m "Adding changes to export and import states from file"
+ 1959  git pu
+ 1960  git push
+ 1961  cd Workspaces/independent/provenance-
+ 1962  ls
+ 1963  cd Workspaces/independent/
+ 1964  ls
+ 1965  cd provenance-lib-core-forked/
+ 1966  cd provenance-lib-core/
+ 1967  npm t
+ 1968  clear
+ 1969  npm t
+ 1970  clear
+ 1971  npm t
+ 1972  clear
+ 1973  npm t
+ 1974  clear
+ 1975  npm t
+ 1976  clear
+ 1977  npm t
+ 1978  clear
+ 1979  git status
+ 1980  git add src/
+ 1981  git add syncPiece.txt 
+ 1982  git commit -m "added json diffing capability"
+ 1983  git push
+ 1984  cd Workspaces/independent/provenance-lib-core-forked/
+ 1985  ls
+ 1986  cd provenance-lib-core/
+ 1987  clear
+ 1988  ls
+ 1989  clear
+ 1990  npm t
+ 1991  clear
+ 1992  npm t
+ 1993  npm t\
+ 1994  npm t
+ 1995  clear
+ 1996  npm t
+ 1997  cd Workspaces/independent/provenance-lib-core-forked/provenance-lib-core/test/
+ 1998  ls
+ 1999  clear
+ 2000  ls
+ 2001  python -m SimpleHTTPServer 8080
+ 2002  clear
+ 2003  cd ./../../..
+ 2004  ls
+ 2005  cd ./..
+ 2006  ls
+ 2007  cd la-starter-pack-master/
+ 2008  ls
+ 2009  npm run dev-web
+ 2010  npm
+ 2011  npm help
+ 2012  npm build
+ 2013* npm r
+ 2014  npm build
+ 2015  npm run-script build
+ 2016  npm run dev-web
+ 2017  clear
+ 2018  history
+ 2019  history > commandList.txt

@@ -34,13 +34,11 @@ export function resetState(prevState : stateObject) {
 export function resetState2(prevState : stateObject2) {
 
   let brushG = d3.select(".selection");
-  console.log("logging in reset")
   let keyValue = Object.keys(prevState)[0];
-  console.log(prevState[keyValue].xValue);
   let currentWidth = +brushG.attr("width");
 
-  console.log(currentWidth);
-
+  console.log("reset called");
+  console.log(prevState[keyValue].xValue);
   gBrush.call(brush.move, [prevState[keyValue].xValue, prevState[keyValue].xValue + currentWidth]);
 
   return prevState;
@@ -108,8 +106,6 @@ export function staircase() {
     stateArray.push(arr[j][1]);
   }
   const currentState : stateObject = ({order : stateArray});
-  //console.log("Returning the value as");
-  //console.log(currentState);
   return currentState;
 
 }
@@ -245,15 +241,9 @@ export function update(data) {
 
 
   let selectionScatter = d3.selectAll("#scatterplot");
-  console.log("selected");
-  console.log(selectionScatter);
-  console.log("before removal");
-  console.log(selectionScatter.selectAll("circle"));
   selectionScatter.selectAll("circle").remove();
 
   let selectionCircles = selectionScatter.selectAll("circle");
-  console.log("after removal");
-  console.log(selectionCircles);
 
   let dataselectionScatter = selectionCircles.data(data);
 
@@ -380,7 +370,6 @@ export function scatterPlotFunction() {
 
   function brushmoved() {
     var s = d3.event.selection;
-    console.log(s)
     if (s == null) {
       handle.attr("display", "none");
       circle.classed("active", false);
@@ -393,14 +382,14 @@ export function scatterPlotFunction() {
 }
 
 export function moveBrushNow() {
-  console.log("Call reached here");
   let brushG = d3.select(".selection");
   let currentx = +brushG.attr("x");
   let currentWidth = +brushG.attr("width");
 
   gBrush.call(brush.move, [currentx + 10, currentx + 10 + currentWidth]);
   let currentStateVal : stateObject2 = ({xValue : currentx + 10});
-
+  console.log("move called");
+  console.log(currentx + 10);
   return currentStateVal;
 
   //console.log(brush.getattr("x"));
