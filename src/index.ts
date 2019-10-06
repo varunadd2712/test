@@ -1,96 +1,74 @@
 import * as d3 from 'd3'
 import { createStore, combineReducers } from "redux";
-import { initialize } from "@visdesignlab/provenance-lib-core/lib/src/";
+import { initialize, initProvenance } from "@visdesignlab/provenance-lib-core/lib/src/";
 import { recordableReduxActionCreator } from "@visdesignlab/provenance-lib-core/lib/src/";
+import { Provenance } from "@visdesignlab/provenance-lib-core/lib/src/";
 
-var state = JSON.parse("{\"keys\":[0,1,2,3,4,5,6,7,8,9]}")
+import {
+  vizState,
+  VizApp,
+  initVisState
+} from "./vizApp";
 
-export enum VizActionsEnum {
-  SORT_DATA = "SORT_DATA",
-  EXPORT_DATA = "EXPORT_DATA",
-  IMPORT_DATA = "IMPORT_DATA",
-  ORIGINAL_DATA = "ORIGINAL_DATA"
+const provenance = initProvenance(initVisState)
+const app = VizApp(provenance);
+
+provenance.addObserver("state", (state : vizState) => {
+  render(state)
+});
+
+provenance.applyAction({
+  label: "Current State Test",
+  action: () => {
+    const currentState = (app.currentState() as any) as vizState;
+    render(currentState)
+    return currentState;
+  },
+  args:[initVisState]
+})
+
+export function sortFunction() {
+
+  provenance.applyAction({
+    label: "Sort Data",
+    action: () => {
+      const currentState = (app.currentState() as any) as vizState;
+      currentState.state = [4,9,2,5,0,8,7,6,3,1];
+      return currentState;
+    },
+    args: []
+  })
 }
 
-interface VizAction {
-  type: VizActionsEnum;
-  args: stateObject;
+export function originalDataFunction() {
+
+  provenance.applyAction({
+    label: "Original Data",
+    action: () => {
+      const currentState = (app.currentState() as any) as vizState;
+      currentState.state = [0,1,2,3,4,5,6,7,8,9];
+      return currentState;
+    },
+    args: []
+  })
 }
 
-export interface stateObject {
+export function logGraphFunction() {
 
-    state : number[];
+  console.log(provenance.graph())
 }
 
-export const sortDataAction = (toSet:stateObject): VizAction => ({
-  type: VizActionsEnum.SORT_DATA,
-  args: toSet
-});
+let btn = document.getElementById("sortButton");
+btn.addEventListener("click", (e:Event) => this.sortFunction());
 
-export const exportDataAction = (toSet:stateObject): VizAction => ({
-  type: VizActionsEnum.EXPORT_DATA,
-  args: toSet
-});
 
-export const importDataAction = (toSet:stateObject): VizAction => ({
-  type: VizActionsEnum.IMPORT_DATA,
-  args: toSet
-});
+let btn1 = document.getElementById("originalButton");
+btn1.addEventListener("click", (e:Event) => this.originalDataFunction());
 
-export const originalDataAction = (toSet:stateObject): VizAction => ({
-  type: VizActionsEnum.ORIGINAL_DATA,
-  args: toSet
-});
+let btn2 = document.getElementById("logButton");
+btn2.addEventListener("click", (e:Event) => this.logGraphFunction());
 
-const vizReducer = (count: stateObject, action: VizAction) => {
-  switch (action.type) {
-    case VizActionsEnum.SORT_DATA: {
-      sortFunction();
-      return 100;
-    }
-
-    case VizActionsEnum.IMPORT_DATA: {
-      importState();
-      return 100;
-    }
-
-    case VizActionsEnum.EXPORT_DATA: {
-      exportState();
-      return 100;
-    }
-
-    case VizActionsEnum.ORIGINAL_DATA: {
-      originalDataFunction();
-      return 100;
-    }
-
-    default:
-      originalDataFunction();
-      return 100;
-  }
-};
-
-export const Vizualization = () =>
-  createStore(
-    combineReducers({
-      count: vizReducer
-    })
-  );
-
-const app = Vizualization();
-
-console.log(initialize)
-const provenance = initialize(app);
-
-const exportAction = recordableReduxActionCreator(
-  "exportAction",
-  VizActionsEnum.EXPORT_DATA,
-  100
-);
-
-provenance.applyAction(exportAction)
-
-export function render() {
+export function render(state) {
 
   var margin = {top: 20, right: 20, bottom: 30, left: 40},
       width = 960 - margin.left - margin.right,
@@ -108,7 +86,7 @@ export function render() {
       .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
 
-    let data = getData();
+    let data = getData(state);
     x.domain(data.map(function(d) { return d.salesperson; }));
     y.domain([0, d3.max(data, function(d) { return d.sales; })]);
 
@@ -130,7 +108,8 @@ export function render() {
 
 }
 
-export function getData() {
+export function getData(state) {
+
   let data = []
   let dataPiece = {}
   dataPiece["salesperson"] = "Bob"
@@ -184,22 +163,15 @@ export function getData() {
 
   let dataState = [];
 
-  for (let i = 0 ; i < state.keys.length ; i++) {
-      dataState.push(data[state.keys[i]])
+  for (let i = 0 ; i < state.state.length ; i++) {
+      dataState.push(data[state.state[i]])
   }
 
   return dataState;
 }
+/*
 
-export function originalDataFunction() {
-  state = JSON.parse("{\"keys\":[0,1,2,3,4,5,6,7,8,9]}")
-  render();
-}
 
-export function sortFunction() {
-  state = JSON.parse("{\"keys\":[4,9,2,5,0,8,7,6,3,1]}")
-  render();
-}
 
 export function exportState() {
   let queryString = btoa(JSON.stringify(state));
@@ -212,11 +184,7 @@ export function importState() {
   render()
 }
 
-let btn1 = document.getElementById("originalButton");
-btn1.addEventListener("click", (e:Event) => this.originalDataFunction());
 
-let btn = document.getElementById("sortButton");
-btn.addEventListener("click", (e:Event) => this.sortFunction());
 
 let btn2 = document.getElementById("importButton");
 btn2.addEventListener("click", (e:Event) => this.importState());
@@ -225,3 +193,4 @@ let btn3 = document.getElementById("exportButton");
 btn3.addEventListener("click", (e:Event) => this.exportState());
 
 render();
+*/

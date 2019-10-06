@@ -68,6 +68,7 @@
     "@types/d3": "^5.7.1",
     "@visdesignlab/provenance-lib-core": "file:../independent/provenance-lib-core-forked/provenance-lib-core",
     "fs": "0.0.1-security",
+    "provenance-lib-core": "file:../independent/provenance-lib-core-forked/provenance-lib-core",
     "redux": "^4.0.1"
   }
 }
