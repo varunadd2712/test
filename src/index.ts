@@ -76,9 +76,6 @@ export function importPartialState() {
   provenance.importPartialState();
 }
 
-
-
-
 let btn = document.getElementById("sortButton");
 btn.addEventListener("click", (e:Event) => this.sortFunction());
 
