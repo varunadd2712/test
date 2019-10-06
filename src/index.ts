@@ -53,10 +53,31 @@ export function originalDataFunction() {
   })
 }
 
+export function exportState() {
+
+  provenance.exportState();
+}
+
+export function exportPartialState() {
+
+  provenance.exportPartialState();
+}
+
 export function logGraphFunction() {
 
-  console.log(provenance.graph())
+  console.log(provenance.graph());
 }
+
+export function importState() {
+  provenance.importState();
+}
+
+export function importPartialState() {
+  provenance.importPartialState();
+}
+
+
+
 
 let btn = document.getElementById("sortButton");
 btn.addEventListener("click", (e:Event) => this.sortFunction());
@@ -67,6 +88,18 @@ btn1.addEventListener("click", (e:Event) => this.originalDataFunction());
 
 let btn2 = document.getElementById("logButton");
 btn2.addEventListener("click", (e:Event) => this.logGraphFunction());
+
+let btn3 = document.getElementById("exportButton");
+btn3.addEventListener("click", (e:Event) => this.exportState());
+
+let btn4 = document.getElementById("exportPartialButton");
+btn4.addEventListener("click", (e:Event) => this.exportPartialState());
+
+let btn5 = document.getElementById("importButton");
+btn5.addEventListener("click", (e:Event) => this.importState());
+
+let btn6 = document.getElementById("importPartialButton");
+btn6.addEventListener("click", (e:Event) => this.importPartialState());
 
 export function render(state) {
 
@@ -173,24 +206,11 @@ export function getData(state) {
 
 
 
-export function exportState() {
-  let queryString = btoa(JSON.stringify(state));
-  window.location.search = "?" + queryString
-}
-
-export function importState() {
-  let stateString = window.location.search.substring(1)
-  state = JSON.parse(atob(stateString))
-  render()
-}
 
 
 
-let btn2 = document.getElementById("importButton");
-btn2.addEventListener("click", (e:Event) => this.importState());
 
-let btn3 = document.getElementById("exportButton");
-btn3.addEventListener("click", (e:Event) => this.exportState());
+
 
 render();
 */
