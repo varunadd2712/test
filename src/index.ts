@@ -18,7 +18,7 @@ provenance.addObserver("state", (state : vizState) => {
 });
 
 provenance.applyAction({
-  label: "Current State Test",
+  label: "Initial Render",
   action: () => {
     const currentState = (app.currentState() as any) as vizState;
     render(currentState)
@@ -27,7 +27,7 @@ provenance.applyAction({
   args:[initVisState]
 })
 
-export function sortFunction() {
+function sortFunction() {
 
   provenance.applyAction({
     label: "Sort Data",
@@ -40,7 +40,7 @@ export function sortFunction() {
   })
 }
 
-export function originalDataFunction() {
+function originalDataFunction() {
 
   provenance.applyAction({
     label: "Original Data",
@@ -53,52 +53,58 @@ export function originalDataFunction() {
   })
 }
 
-export function exportState() {
+function exportState() {
 
   provenance.exportState();
 }
 
-export function exportPartialState() {
+function exportPartialState() {
 
   provenance.exportPartialState();
 }
 
-export function logGraphFunction() {
+function logGraphFunction() {
 
   console.log(provenance.graph());
 }
 
-export function importState() {
+function importState() {
   provenance.importState();
 }
 
-export function importPartialState() {
+function importPartialState() {
   provenance.importPartialState();
 }
 
-let btn = document.getElementById("sortButton");
-btn.addEventListener("click", (e:Event) => this.sortFunction());
+function doneObserver() {
+  provenance.done();
+}
 
+let btn = document.getElementById("sortButton");
+btn.addEventListener("click", (e:Event) => sortFunction());
 
 let btn1 = document.getElementById("originalButton");
-btn1.addEventListener("click", (e:Event) => this.originalDataFunction());
+btn1.addEventListener("click", (e:Event) => originalDataFunction());
 
 let btn2 = document.getElementById("logButton");
-btn2.addEventListener("click", (e:Event) => this.logGraphFunction());
+btn2.addEventListener("click", (e:Event) => logGraphFunction());
 
 let btn3 = document.getElementById("exportButton");
-btn3.addEventListener("click", (e:Event) => this.exportState());
+btn3.addEventListener("click", (e:Event) => exportState());
 
 let btn4 = document.getElementById("exportPartialButton");
-btn4.addEventListener("click", (e:Event) => this.exportPartialState());
+btn4.addEventListener("click", (e:Event) => exportPartialState());
 
 let btn5 = document.getElementById("importButton");
-btn5.addEventListener("click", (e:Event) => this.importState());
+btn5.addEventListener("click", (e:Event) => importState());
 
 let btn6 = document.getElementById("importPartialButton");
-btn6.addEventListener("click", (e:Event) => this.importPartialState());
+btn6.addEventListener("click", (e:Event) => importPartialState());
 
-export function render(state) {
+let btn7 = document.getElementById("doneButton");
+btn7.addEventListener("click", (e:Event) => doneObserver());
+
+function render(state) {
 
   var margin = {top: 20, right: 20, bottom: 30, left: 40},
       width = 960 - margin.left - margin.right,
@@ -138,7 +144,7 @@ export function render(state) {
 
 }
 
-export function getData(state) {
+function getData(state) {
 
   let data = []
   let dataPiece = {}
@@ -199,15 +205,3 @@ export function getData(state) {
 
   return dataState;
 }
-/*
-
-
-
-
-
-
-
-
-
-render();
-*/
