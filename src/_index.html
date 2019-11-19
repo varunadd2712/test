@@ -1,19 +1,63 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <style> /* set the CSS */
+button {
+  display: block;
+  border-radius: 4px;
+  background-color: #800080;
+  border: 4px;
+  color: #F8FFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 4px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
 
-.bar { fill: steelblue; }
+.bar {
+  fill: #800080;
+}
+
+.trace {
+  opacity: 0.8;
+}
+
+.trace:hover {
+  opacity: 1;
+  stroke-width:2px;
+  stroke:black;
+}
 
 </style>
 <body>
-<button id="sortButton">Sort Data</button>
-<button id="originalButton">Original Data</button>
-<button id="importButton">Import State</button>
-<button id="importPartialButton">Import Partial State</button>
-<button id="exportButton">Export State</button>
-<button id="exportPartialButton">Export Partial State</button>
-<button id="logButton">Log Graph</button>
-<button id="doneButton">Done</button>
-<!-- load the d3.js library -->
+
+<div id = "buttonDiv">
+  <button id="sortButton">Sort Data</button>
+  <br>
+  <button id="originalButton">Original Data</button>
+  <br>
+  <button id="importButton">Import State</button>
+  <br>
+  <button id="importPartialButton">Import Partial State</button>
+  <br>
+  <button id="exportButton">Export State</button>
+  <br>
+  <button id="exportPartialButton">Export Partial State</button>
+  <br>
+  <button id="logButton">Import Graph</button>
+  <br>
+  <button id="log2Button">Log Graph</button>
+  <br>
+  <button id="doneButton">Done</button>
+</div>
+
+<div id = "svgDiv">
+</div>
+
+<div id = "actionTraceDiv">
+  <h3> Action Trace </h3>
+</div>
 <script src="https://d3js.org/d3.v5.js"></script>
 </body>
